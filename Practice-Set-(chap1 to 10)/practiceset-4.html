@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Practiceset-4</title>
+    <!--Variables
+1. Save your name in a variable inside script tag
+2. Display name from the variable on the "page"
+3. Calculate the cost of Myntra Bag and keep it in a
+variable
+4. Show it to console
+5. Keep GST percentage as constant
+6. Use eval method from math to convert string
+calculation into result-->
+
+</head>
+<body>
+   <p id="name-display" ></p>
+
+    <script>
+        const myName ='Sajid';
+        document.querySelector('#name-display').innerText =myName;
+ 
+         const GSTpercentage = 18;
+    let cartValue = Math.round(((15599 - (10/100 * 15599)) - 272 + (2499 - (41/100*2499)) - 29 + 25 + 20) * (100 + GSTpercentage) / 100);
+    console.log(cartValue);
+
+    console.log(eval('2+3+5*7-9'));
+    </script>
+</body>
+
+</html>
+
+
+
+<!--Explanation-->
+
+<!--// const myName = 'Sajid';
+
+// const = variable create karne ka modern way
+// myName = variable ka naam
+// 'Sajid' = string value
+// Is variable me apna naam store kiya hai
+
+
+document.querySelector('#name-display').innerText = myName;
+
+// document = poora HTML page
+// querySelector() = HTML element find karta hai
+// '#name-display' = id wala paragraph select kiya
+// innerText = element ke andar text dikhata hai
+// myName variable ki value page par display ho jayegi
+
+
+
+// const GSTpercentage = 18;
+
+// GST percentage fix hai
+// const use kiya kyuki GST badalne wala nahi hai
+// 18 matlab 18% GST
+
+
+let cartValue = Math.round(
+    (
+        (15599 - (10/100 * 15599))  // First item par 10% discount
+        - 272                       // Extra discount
+        +
+        (2499 - (41/100 * 2499))   // Second item par 41% discount
+        - 29                        // Extra discount
+        +
+        25                          // Convenience fee
+        +
+        20                          // Platform fee
+    )
+    *
+    (100 + GSTpercentage) / 100    // GST add kiya
+);
+
+
+// let = variable create kiya
+// cartValue = final bag amount store karega
+// Math.round() = decimal hata kar nearest whole number banata hai
+// Pehle discount nikala
+// Fir extra charges add kiye
+// Fir GST add kiya
+// Final amount cartValue me store ho gaya
+
+
+
+console.log(cartValue);
+
+// console.log() = console me output dikhata hai
+// Final bag amount browser console me print hoga
+
+
+
+console.log(eval('2+3+5*7-9'));
+
+// eval() string ko JavaScript expression ki tarah run karta hai
+
+// String:
+// '2+3+5*7-9'
+
+// Calculation:
+// 5*7 = 35
+// 2+3+35-9
+// = 31
+
+// Output:
+// 31
+
+// eval() string calculation ko actual result me convert karta hai-->

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Myntra Bag Exercise</title>
+    <link rel="stylesheet" href="myntra bag.css">
+</head>
+<body>
+    <button class="bag-button" onclick="
+     CartQuantity =CartQuantity +1;          //+1 se increase
+     document.querySelector('#cart-summary').
+innerText =`your Bag has ${CartQuantity} items`; ">Added to bag</button>
+
+    <button class="wish-button" onclick="
+    CartQuantity--;          //-1 se increase
+     document.querySelector('#cart-summary').
+innerText =`your Bag has ${CartQuantity} items`;
+    ">Move to Wishlist</button>
+
+    <button class="bag-button" onclick="
+    CartQuantity+=2;         //+2 se increase  
+     document.querySelector('#cart-summary').
+innerText =`your Bag has ${CartQuantity} items`;
+    ">Added 1+1 Sale Items</button>
+
+    <h1 id="cart-summary">Your Bag has 0 Items</h1>
+
+    <script>
+let CartQuantity =0; // variable define kiya 
+document.querySelector('#cart-summary').
+innerText =`your Bag has ${CartQuantity} items`;
+    </script>
+</body>
+</html>

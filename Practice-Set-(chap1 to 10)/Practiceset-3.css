@@ -1,0 +1,30 @@
+.click_button{
+    background-color: rgb(186, 231, 90);
+    border-radius: 10px;
+}
+
+.class-button{
+    width: 100px;
+    height: 20px;
+border: 2px solid black;
+border-radius: 10px;
+text-align: center;
+color: rgb(149, 4, 4);
+}
+
+.add_to{
+    width: 120px;
+    height: 40px;
+border: none;
+border-radius: 50px;
+text-align: center; 
+background-color: rgb(170, 249, 90); 
+}
+
+.wishlist{
+  width: 170px;
+    height: 40px;
+border: 2px solid black;
+border-radius: 10px;
+text-align: center;  
+}

@@ -1,0 +1,18 @@
+.bag-button{
+    width: 120px;
+    height: 40px;
+border: none;
+border-radius: 50px;
+text-align: center; 
+background-color: rgb(170, 249, 90); 
+}
+
+
+.wish-button{
+width: 170px;
+    height: 40px;
+border: 2px solid black;
+border-radius: 10px;
+text-align: center; 
+text-transform: uppercase;
+}

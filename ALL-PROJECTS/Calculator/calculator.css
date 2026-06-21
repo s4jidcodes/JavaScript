@@ -1,0 +1,57 @@
+#calculator {
+
+  /* Calculator ke around border */
+  border: 2px solid rgb(237, 157, 157);
+
+  /* Corners ko thoda round banata hai */
+  border-radius: 5px;
+
+  /* Calculator ki fixed width */
+  width: 200px;
+}
+
+#display {
+
+  /* Border aur display ke beech spacing */
+  margin: 10px;
+
+  /* Parent width ka 85% */
+  width: 85%;
+
+  /* Display text bada dikhe */
+  font-size: 25px;
+}
+
+.button-container {
+
+  /*
+    Flexbox enable
+
+    Buttons ek line me arrange honge
+  */
+  display: flex;
+
+  /*
+    Buttons ko horizontally center karta hai
+  */
+  justify-content: center;
+
+  /*
+    Space kam hone par next line me bhej deta hai
+
+    Calculator grid jaisa look isi se banta hai
+  */
+  flex-wrap: wrap;
+}
+
+.button {
+
+  /* Har button ki width */
+  width: 45px;
+
+  /* Har button ki height */
+  height: 45px;
+
+  /* Buttons ke beech spacing */
+  margin: 3px;
+}

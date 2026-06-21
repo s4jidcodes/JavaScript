@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  
+  <link rel="stylesheet" href="calculator.css">
+
+  <title> Project Calculator</title>
+
+</head>
+
+<body>
+
+  <!-- Calculator ka main container -->
+  <div id="calculator">
+
+    <!--
+      readonly:
+      User keyboard se input nahi de sakta.
+      Sirf JavaScript display update karegi.
+    -->
+    <input type="text" id="display" readonly>
+
+    <!--
+      here Saare buttons ko flexbox ke through arrange karne ke liye container
+     define kiya -->
+    <div class="button-container">
+
+      <!--
+        Clear Button
+
+        currentDisplay = ''
+        Puri calculation string empty kar deta hai.
+
+        Display ko bhi update karna zaruri hai
+        warna variable clear hoga but screen par old value dikhegi.
+      -->
+      <button class="button" onclick="
+      currentDisplay = '';
+      document.querySelector('#display').value = currentDisplay;
+      ">C</button>
+
+      <!--
+        Number Button
+
+        String concatenation ho rahi hai.
+
+        Example:
+        '' → '1'
+        '1' → '11'
+
+        Display ko har click ke baad update kar rahe hain.
+      -->
+      <button class="button" onclick="
+      currentDisplay = currentDisplay + '1';
+      document.querySelector('#display').value = currentDisplay;
+      ">1</button>
+
+      <button class="button" onclick="
+      currentDisplay = currentDisplay + '2';
+      document.querySelector('#display').value = currentDisplay;
+      ">2</button>
+
+      <!--
+        Operator Button
+
+        '+' bhi string ki tarah add ho raha hai.
+
+        Example:
+        '12'
+        ↓
+        '12+   '
+
+      -->
+      <button class="button" onclick="
+      currentDisplay = currentDisplay + '+';
+      document.querySelector('#display').value = currentDisplay;
+      ">+</button>
+      <button class="button" onclick="
+      currentDisplay = currentDisplay + '3';
+      document.querySelector('#display').value = currentDisplay;
+      ">3</button>
+      <button class="button" onclick="
+      currentDisplay = currentDisplay + '4';
+      document.querySelector('#display').value = currentDisplay;
+      ">4</button>
+      <button class="button" onclick="
+      currentDisplay = currentDisplay + '-';
+      document.querySelector('#display').value = currentDisplay;
+      ">-</button>
+      <button class="button" onclick="
+      currentDisplay = currentDisplay + '5';
+      document.querySelector('#display').value = currentDisplay;
+      ">5</button>
+      <button class="button" onclick="
+      currentDisplay = currentDisplay + '6';
+      document.querySelector('#display').value = currentDisplay;
+      ">6</button>
+      <button class="button" onclick="
+      currentDisplay = currentDisplay + '*';
+      document.querySelector('#display').value = currentDisplay;
+      ">*</button>
+      <button class="button" onclick="
+      currentDisplay = currentDisplay + '7';
+      document.querySelector('#display').value = currentDisplay;
+      ">7</button>
+      <button class="button" onclick="
+      currentDisplay = currentDisplay + '8';
+      document.querySelector('#display').value = currentDisplay;
+      ">8</button>
+      <button class="button" onclick="
+      currentDisplay = currentDisplay + '/';
+      document.querySelector('#display').value = currentDisplay;
+      ">/</button>
+      
+
+      <!-- Remaining buttons same logic follow karte hain -->
+
+      <!--
+        eval()......evaluate karta hai value nikalta hai
+
+        currentDisplay string ko actual JavaScript expression ki tarah execute karta hai.
+
+        Example:
+
+        '12+5'
+
+        ↓
+
+        eval('12+5')
+
+        ↓
+
+        17
+
+        Result wapas currentDisplay me store ho jata hai.
+      -->
+      <button class="button" onclick="
+      currentDisplay = eval(currentDisplay);  // this line eval kiya then waps currentdisplay mai store value jaane ko kahan 
+      document.querySelector('#display').value = currentDisplay;
+      ">=</button>
+
+      <button class="button" onclick="
+      currentDisplay = currentDisplay + '9';
+      document.querySelector('#display').value = currentDisplay;
+      ">9</button>
+      <button class="button" onclick="
+      currentDisplay = currentDisplay + '0';
+      document.querySelector('#display').value = currentDisplay;
+      ">0</button>
+      <button class="button" onclick="
+      currentDisplay = currentDisplay + '.';
+      document.querySelector('#display').value = currentDisplay;
+      ">.</button>
+
+
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  <script>
+
+    /*
+      currentDisplay
+
+      Calculator ki current calculation ko string ke form me store karta hai.
+
+      Example:
+
+      ''
+      '1'
+      '12'
+      '12+'
+      '12+5'
+    */
+    let currentDisplay = '';
+
+    /*
+      Initial display value set kar rahe hain.
+
+      querySelector('#display')
+      => id="display" wala input select karta hai
+
+      .value (IMP)
+      => input box ke andar ki value change karta hai contineously 
+    */
+    document.querySelector('#display').value = currentDisplay;
+
+  </script>
+
+</body>
+</html>
