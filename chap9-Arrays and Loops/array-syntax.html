@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array Syntax & values</title>
+
+</head>
+<body>
+   
+    <script>
+ 
+
+ //1.Save Array in Variable
+ // Array ko variable me store kar sakte hain
+let numbers = [10, 20, 30];
+
+console.log(numbers);
+
+//2.Access Values
+// Index se value access karte hain
+
+let colors = ["Red", "Green", "Blue"];
+
+console.log(colors[0]);
+// Red
+
+console.log(colors[1]);
+// Green
+
+console.log(colors[2]);
+// Blue
+
+
+//3.Multi-line Array
+// Readability ke liye multiple lines me likh sakte hain
+
+// let fruits = [
+//   "Apple",
+//   "Mango",
+//   "Banana"
+// ];
+
+
+//4.Array Inside Array (Nested Array)
+// Array ke andar array bhi ho sakta hai
+
+let marks = [
+  [90, 85],
+  [70, 95]
+];
+
+console.log(marks[0]);
+// [90, 85]
+
+console.log(marks[0][1]);
+// 85
+
+
+//5.Any Data Type
+// Array me kisi bhi type ki value store kar sakte hain
+
+let data = [
+  "salman",
+  20,
+  true,
+  null
+];
+
+console.log(data);
+
+
+//6.typeof Array
+// Array par typeof lagane se "object" aata hai
+
+let fruits = ["Apple", "Mango"];
+
+console.log(typeof fruits);
+
+// Output:
+// object
+
+//Note
+// [] → Array
+
+// , → Values Separate
+
+// [index] → Value Access
+
+// Array ke andar Array bhi ho sakta hai
+
+// typeof Array → object
+   
+   </script>
+</body>
+</html>

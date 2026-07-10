@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>return statement</title>
+
+</head>
+<body>
+    
+
+    <script>
+        // function generateRandomMove(){
+        //     let random = Math.random();
+        //     let randomMove = random * 3; 
+        //     return randomMove;
+        // }
+        // let randomMove = generateRandomMove();
+        // console.log(randomMove);
+        // console.log(randomMove);
+        // console.log(randomMove);
+        // console.log(randomMove);
+
+        function determineDriveStatus(){
+
+            let age = 18; // here  variable defined 
+            if (age === undefined){
+                return 'Aap Avtaar hai';
+            }
+            if (age >= 18){
+                return 'You can to drive';
+            } else{
+                return 'You are not eligible to drive';
+            }
+            return status; // ye line kabhi execute nhi hogi kyuki return statement ke baad koi bhi code execute nhi hota
+        }
+        console.log(determineDriveStatus()); // ye function call kar rahe hai aur return value ko console mai print kar rahe hai
+
+
+    </script>
+</body>
+</html>

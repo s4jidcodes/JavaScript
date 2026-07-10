@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+
+
+// let product = {
+//   name: "Shoes",
+//   price: 999
+// };
+
+// console.log(product.name);
+// // Output: Shoes
+
+// console.log(product.price);
+// // Output: 999
+//     
+
+// update value,
+
+let product = {
+  name: "Shoes", // comma se separate karna hai
+  'item-id': "123",
+  // here wkt  variabe special character - nhi use kar sakte . 
+  // but agr apko special character use karna hai to aapko string me likhna hoga (i.e quote mai 'item-123')
+  price: 999,
+};
+
+
+product.price = 1499;// update value
+
+console.log(product.price);
+console.log(product['item-id']); // quote mai likha hai to aapko bracket notation use karna hoga
+// dot notation use karne par error aayega
+// Output:
+
+// 1499
+
+// update property 
+
+// let product = {
+//   name: "Shoes",
+//   price: 999,
+// };
+
+// // Nayi property add ki
+
+// product.brand = "Nike";
+
+// console.log(product.brand);
+
+// // Output:
+// // Nike
+
+
+</script>
+
+
+    
+</body>
+</html>

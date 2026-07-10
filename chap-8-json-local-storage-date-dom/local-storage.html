@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>local Storage</title>
+</head>
+<body>
+    
+    <script>
+       
+       
+       
+        // setItem()
+       // Data store karta hai
+
+      localStorage.setItem("name", "Sajid"); // Notes: 1st value = Key & 2nd value = Value
+
+       // next
+
+      // getItem()
+// Stored data wapas laata hai
+
+let userName = localStorage.getItem("name");
+
+console.log(userName);  //sajid
+
+//next
+
+// removeItem()
+// Sirf ek key delete karta hai
+// removeItem()
+// Sirf ek key delete karta hai
+
+// localStorage.removeItem("name");
+
+//next
+
+// only string store hote hai 
+// Number bhi string ban kar store hota hai
+
+localStorage.setItem("age", 20);
+
+console.log(localStorage.getItem("age"));
+
+// Output:
+// "20"
+
+//next
+
+// object store karna hai then
+// Object direct store nahi hota
+
+let student = {
+  name: "Aziz",
+  age: 20
+};
+
+// Object → JSON String
+
+localStorage.setItem("student", JSON.stringify(student));
+
+    </script>
+</body>
+</html>

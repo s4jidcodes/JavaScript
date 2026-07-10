@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Cricket Game</title>
+    <!--Bat Ball Stump Game-->
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+    
+</head>
+<body>
+   <h2>Bat Ball Stump Game</h2>
+
+   
+    <button onclick="
+    // console.log('You have chosen Bat');  ye alert mai dala hai niche see
+
+    //tum ne bat choose kiya now neeche defined computer random value k basis par batting,balling,stump chose karega
+    // This will generate random number between 0 and 3
+
+    let randomNumber = Math.random() * 3;
+    let computerChoice;    //global scope
+
+    if (randomNumber > 0 &&  randomNumber <= 1) {
+        // Computer choice store karne ke liye
+       computerChoice = 'Bat';
+       //console.log('computer choice is Bat');
+    } else if (randomNumber > 1 && randomNumber <= 2)
+    {
+        computerChoice = 'Ball';
+       // console.log('computer choice is Ball');
+    } else{
+      computerChoice = 'Stump'
+     //console.log('computer choice is stump')
+    }
+
+      //const computerChoiceMsg =`Computer choice is ${computerChoice}` 
+      
+     // now we have global scope  ka variable .than one time define karne k liye $ variable dekar aur baki console.log ko  //comment kar diya 
+
+
+     //now compare karnege computer and user choice ko. means both same choose kiya toh kya hoga? pc ball ,user bat ,toh kya hoga neeche define kiye..
+
+     let resultMsg;
+
+    if (computerChoice === 'Ball') {
+       // console.log('user won.')
+       resultMsg ='user won.';
+
+    } else if (computerChoice === 'Bat'){
+        resultMsg = `It's a tie`;
+    } else if (computerChoice ==='Stump'){
+
+        resultMsg = 'Computer has won';
+    }
+    
+    //computer choice and final result ko alert mai final message banaye hai abhi tak console mai dekh rahe the .. now  resultMsg  and comapre wale mai ko 'let resultMsg' and pc and user compare mai jitne console.log hai hatao resultMsg kro..
+
+    alert(`Your have chosen Bat. Computer Choice is ${computerChoice} and ${resultMsg}`) //ek string bana diye
+
+    ">Bat</button> 
+
+
+
+    <!--now baki 2 button k liye bhi define karenge i.e ball and stump button-->
+
+    <button
+    onclick="
+   
+
+    let randomNumber = Math.random * 3;
+     //randomNumber = Math.random() * 3; //let hata diya bcoz ooper wale button mai already define/declare hai
+
+     //computerChoice;
+    let computerChoice;    //global scope //let hata diya bcoz declare already
+
+           
+    if (randomNumber > 0 &&  randomNumber <= 1) {
+      
+       computerChoice = 'Bat';
+       
+    } else if (randomNumber > 1 && randomNumber <= 2)
+    {
+        computerChoice = 'Ball';
+    } else{
+      computerChoice = 'Stump'
+     
+    }
+     
+     
+  let resultMsg; 
+    // resultMsg;
+
+    if (computerChoice === 'Ball') {
+       resultMsg =`It's a tie`; //ball button par hai
+
+    } else if (computerChoice === 'Bat'){
+        resultMsg = 'Computer has won';
+    } else if (computerChoice ==='Stump'){
+        resultMsg = 'User has won';
+    }
+   
+    alert(`Your have chosen Ball. Computer Choice is ${computerChoice} and ${resultMsg}`);
+
+    ">ball</button>
+
+
+
+    <button
+     onclick="
+    
+     let randomNumber = Math.random() * 3; 
+
+    
+      let  computerChoice;    
+    if (randomNumber > 0 &&  randomNumber <= 1) {
+      
+       computerChoice = 'Bat';
+       
+    } else if (randomNumber > 1 && randomNumber <= 2)
+    {
+        computerChoice = 'Ball';
+    } else{
+      computerChoice = 'Stump'
+     
+    }
+     
+     let resultMsg;
+
+    if (computerChoice === 'Ball') {
+       resultMsg =`Computer has won`; //stump  button par hai
+
+    } else if (computerChoice === 'Bat'){
+        resultMsg = 'User has won';
+    } else if (computerChoice ==='Stump'){
+        resultMsg = `It's a tie`;
+    }
+   
+    alert(`Your have chosen Stump. Computer Choice is ${computerChoice} and ${resultMsg}`);
+
+    ">Stump</button>
+
+
+
+   <script></script>
+</body>
+</html>

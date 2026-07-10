@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- chapter wise jaise jasie learn kar rahe more topics waise update kar rahe cricket game ko new concept se and code ko aur better and short kar rahe hai -->
+
+    <title>Cricket Game</title>
+    <!--Bat Ball Stump Game-->
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+    
+</head>
+<body>
+   <h2>Bat Ball Stump Game</h2>
+
+   
+    <button onclick="
+    //generateComputerChoice(); //function call kiya hai  ..function define hai script mai
+    let computerChoice = generateComputerChoice(); 
+
+ //let resultMsg; // global scope hai. button hai result k liye  again define nhi karenge other 2 button mai
+     let resultMsg = getResult('Bat', computerChoice); //here we are calling getResult function and passing userMove and computerMove as parameters. then we will use that result message in alert message in button click event.(i.e in onclick event of button)
+
+    //alert(`Your have chosen Bat. Computer Choice is ${computerChoice} and ${resultMsg}`) //ek string bana diye
+    
+    
+    showAlert('Bat', computerChoice, resultMsg); //function call kiya hai showAlert function ka and pass kiya hai userMove, computerMove and resultMsg as parameters. then we will use that result message in alert message in button click event.(i.e in onclick event of button)
+
+    ">Bat</button> 
+
+
+
+    <!--now baki 2 button k liye bhi define karenge i.e ball and stump button-->
+
+    <button
+    onclick="
+
+   //generateComputerChoice(); //function call kiya hai  ..function define hai script mai
+   computerChoice = generateComputerChoice();
+      resultMsg = getResult('Ball', computerChoice);
+   
+      showAlert('Ball', computerChoice, resultMsg); 
+    
+    ">ball</button>
+
+
+
+    <button
+     onclick="
+
+      computerChoice = generateComputerChoice(); // let nhi kiya kyuki global variable hai computerChoice
+      resultMsg = getResult('Stump', computerChoice);
+   
+    showAlert('Stump', computerChoice, resultMsg);
+    ">Stump</button>
+
+
+
+   <script>
+    // User return instead of Global Variable
+    // means let computerChoice; function ke andar define karenge instead of global variable. then return karenge computerChoice ko and use karenge button mai 
+    // let computerChoice = generateComputerChoice();
+    
+        function generateComputerChoice() {
+        let Choice;    //local scope variable ke andar h
+        // this will generate random number between 0 and 3
+    let randomNumber = Math.random() * 3;
+    if (randomNumber > 0 &&  randomNumber <= 1) {
+
+      return 'Bat';  
+
+    } else if (randomNumber > 1 && randomNumber <= 2)
+    {
+        return 'Ball'; 
+      
+    } else{
+      return 'Stump';
+     
+    }return Choice;
+}
+
+// (pdf after parameter slide) now Create method for comparing user choice & Showing Result alert 
+    //means ham chahte hai ki comparing mechanism(means bat and ball compare wala code) and alert message dono alag function mai ho. so that we can call it from any button click event.
+
+ function getResult(userMove, computerMove){
+    // kya karnega ? here based on userMove and computerMove we will compare and return result message(i.e resultMsg). then we will use that result message in alert message in button click event.(i.e in onclick event of button)
+    
+    let resultMsg; // global scope hai. button hai result k liye  again define nhi karenge other 2 button mai
+
+    if (userMove === 'Bat') {
+        if (computerMove === 'Ball') {
+            return 'user won.';
+        } else if (computerMove === 'Bat'){
+            return `It's a tie`;
+        } else if (computerMove ==='Stump'){
+            return 'Computer has won';
+        }
+    } else if (userMove === 'Ball') {
+        if (computerMove === 'Ball') {
+            return `It's a tie`; //ball button par hai
+        } else if (computerMove === 'Bat'){
+            return 'Computer has won';
+        } else if (computerMove ==='Stump'){
+            return 'User has won';
+        }
+    } else if (userMove === 'Stump') {
+        if (computerMove === 'Ball') {
+            return `Computer has won`; //stump  button par hai
+        } else if (computerMove === 'Bat'){
+            return 'User has won';
+        } else if (computerMove ==='Stump'){
+            return `It's a tie`;
+        }
+    }
+
+    return resultMsg;// kyu likha ? kyu ke agar koi bhi condition match nhi hui to undefined return hoga. so we can return resultMsg variable which is undefined by default.
+ }
+
+   // now alert let liye bhi hum new function mai define karenge. so that we can call it from any button click event.
+   function showAlert(userMove, computerMove, resultMsg)
+   {
+    alert(`Your have chosen ${userMove}. Computer Choice is ${computerMove} and ${resultMsg}`);
+   }
+
+
+   </script>
+</body>
+</html>

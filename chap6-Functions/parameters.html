@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Parameters</title>
+</head>
+<body>
+    
+    <script>
+    //    function sum(a, b){
+    //     let sum = a + b;
+    //     return sum; //means return value of sum function is sum variable. and this value can be used outside the function 
+    // }
+    // console.log(sum(4, 5)); //function call kar rahe hai aur return value ko console mai print kar rahe hai
+    // console.log(sum(41, 55));
+    // console.log(sum(0, 0));
+    // console.log(sum(1, -1));
+    // console.log (sum(6, 9.7));
+
+    //next example
+
+    //function greeting(name){ 
+function greeting(name = "Pyaare"){ // here humne name = dekar default value set kar di hai. agar function call karte waqt argument pass nhi karenge to default value use hogi i.e "Pyaare"
+        console.log(`Namaste ${name} uncle`);
+    }
+      greeting('titu'); //function call kar rahe hai aur argument pass kar rahe hai
+      greeting('sajid');
+      greeting(); //function call kar rahe hai aur argument pass nhi kar rahe hai to default value use hogi
+
+    </script>
+
+</body>
+</html>

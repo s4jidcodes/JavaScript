@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>practice set 6</title>
+    <!-- functions Practice -->
+
+    <!--1. Create a method to check if a number is odd
+or even.
+2. Create a method to return larger of the two
+numbers.
+3. Create Method to convert Celsius to
+Fahrenheit
+F = (9/5) * C + 32-->
+
+</head>
+<body>
+    <h2>Practice Set 6</h2>
+    <script>
+        function checkoddoreven(number){
+            let rem = number % 2; // here we are checking the remainder of the number when divided by 2
+            if (rem === 0) {
+                return "even";
+            } else {
+                return "odd";
+            }
+        }
+        // console.log(checkoddoreven(3));
+        // console.log(checkoddoreven(0));
+        // console.log(checkoddoreven(4));
+        // console.log(checkoddoreven(6));
+
+        function largernumber(num1, num2){
+        //     if (num1 > num2){
+        //         return num1;
+        //     } else {
+        //         return num2;
+        //     }
+        // }
+        return (num1 > num2) ? num1 : num2; // here we are using ternary operator to check which number is larger and return that number
+        }
+        //  console.log(largernumber(5, 10));
+        //  console.log(largernumber(18, 8));
+
+
+        function toFahrenheit(celsiusValue){ // here we are defining a function to convert celsius to fahrenheit
+            
+            let fahrenheit = (9/5) * celsiusValue + 32; // here we are converting celsius to fahrenheit using the formula
+            return fahrenheit;
+        }
+        console.log(toFahrenheit(38));
+        console.log(toFahrenheit(0));
+        console.log(toFahrenheit(100));
+        console.log(toFahrenheit(25));
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Accessing Object Properties</title>
+</head>
+<body>
+    <script>
+// DOT NOTATION
+
+// let product = {
+//   name: "Shoes",
+//   price: 999
+// };
+
+// console.log(product.name);
+// // Output: Shoes
+
+// console.log(product.price);
+// // Output: 999
+
+
+// BRACKET NOTATION
+// Special characters ya spaces wale key ke liye
+
+// let product = {
+//   "nick-name": "Nike Shoes",
+//   price: 999
+// };
+
+// console.log(product["nick-name"]);
+
+// Output:
+// Nike Shoes
+
+
+// Variable use karke property access
+
+let product = {
+  name: "Shoes",
+  price: 999
+};
+
+let key = "price";
+
+console.log(product[key]);
+
+// Output:
+// 999
+
+delete product.price; // delete property 
+//  ek keyword hai jo property ko delete kar deta hai
+
+console.log(product);
+
+// Output:
+// { name: "Shoes" }
+
+
+    </script>
+</body>
+</html>

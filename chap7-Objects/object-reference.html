@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Object Reference</title>
+</head>
+<body>
+    <h2>Object Reference</h2>
+    <script>
+        // OBJECT REFERENCE
+// Object copy karne par data copy nahi hota
+// Sirf reference (address) copy hota hai
+
+// let product1 = {
+//   name: "Shoes",
+//   price: 999
+// };
+
+// let product2 = product1;
+// console.log(product2.price);
+
+// Notes:
+// product1 aur product2
+// Dono same object ko point kar rahe hain
+
+
+
+
+// value change through other variable
+
+let product1 = {
+  name: "Shoes",
+  price: 999
+};
+
+let product2 = product1;
+
+// product2 se value change ki
+
+product2.price = 1499; //value change kiya
+
+console.log(product1.price);
+// Output: 1499
+
+console.log(product2.price);
+// Output: 1499
+
+// here // product2 change hua
+
+// Lekin product1 bhi change ho gaya
+
+// Kyunki dono same object ko refer karte hain
+
+
+
+// different object
+let obj1 = {
+  name: "Aziz"
+};
+
+let obj2 = {
+  name: "Aziz"
+};
+
+console.log(obj1 == obj2);
+
+// Output:
+// false
+
+
+
+
+
+    </script>
+</body>
+</html>

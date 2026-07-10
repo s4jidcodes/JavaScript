@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>JSON</title>
+</head>
+<body>
+    <script>
+
+          let product ={
+            name : 'Tshirt',
+            price: 942,
+            rating: {
+           starts: 4.5,
+           noOfReviews: 453,
+            },
+        };
+        console.log(typeof product); //ask type
+        console.log(product);
+
+        let str = JSON.stringify(product); // product pack
+        console.log(typeof str);
+        console.log(str);
+
+        let newProduct = JSON.parse(str); //product upack wahi milega
+        console.log(typeof newProduct);
+        console.log(newProduct);
+        
+    </script>
+
+    <!--
+// JSON = String
+
+// stringify()
+// Object → JSON
+
+// parse()
+// JSON → Object
+
+// JSON me "" (double quotes) compulsory hain-->
+</body>
+</html>

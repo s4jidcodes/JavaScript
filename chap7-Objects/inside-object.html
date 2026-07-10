@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Inside Object</title>
+</head>
+<body>
+    <script> 
+    // OBJECT WITH PRIMITIVE VALUES
+// Object numbers, strings, booleans store kar sakta hai
+
+let product = {
+  name: "Shoes",
+  price: 999,
+  inStock: true
+};
+
+console.log(product.name);
+
+
+// NESTED OBJECT
+// Object ke andar object
+
+// let student = {
+//   name: "Aziz",
+
+//   marks: {
+//     maths: 90,
+//     science: 95
+//   }
+// };
+
+// console.log(student.marks.maths);
+
+// Output:
+// 90
+
+
+
+// METHOD
+// Object ke andar function ko Method kehte hain
+
+let person = {
+  name: "Aziz",
+
+  greet: function () {
+    console.log("Hello");
+  }
+};
+
+person.greet();
+
+// Output:
+// Hello
+
+
+// NULL
+// Intentionally empty value
+
+let student = {  
+  name: "Aziz",
+  phone: null
+};
+
+console.log(student.phone);
+
+// Output:
+// null
+
+
+
+
+
+    </script>
+</body>
+</html>

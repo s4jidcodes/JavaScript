@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>If alternates</title>
+</head>
+<body>
+
+    
+
+
+    <script>
+
+ /*if (age >= 18) {
+  result = "Adult";
+} else {
+  result = "Minor";
+}*/
+
+
+// TERNARY OPERATOR
+// One-line if else
+
+let age =3; //variable define
+
+let result = age >= 18 ? "Adult" : "Minor"; //true value define hai 18 if 18 hua toh Adult otherwise 18 na hua (means false hua ) then minor
+console.log(result); // o/t minor
+
+/*
+
+// GUARD OPERATOR
+// Fallback value dene ke liye
+
+let userName = "";
+
+let finalName = userName || "Guest"; //here username (true value is not defined) then flase value guest use karega 
+
+console.log(finalName);
+
+// Output: Guest
+
+*/
+
+// DEFAULT OPERATOR
+// Sirf null aur undefined check karta hai
+
+let userName = null;
+
+let finalName = userName ?? "Guest";
+
+console.log(finalName);
+
+// Output: Guest
+
+
+    </script>
+</body>
+</html>

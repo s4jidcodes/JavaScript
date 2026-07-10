@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Autoboxing</title>
+</head>
+<body>
+    <script>
+       // AUTOBOXING
+// Primitive value ko JavaScript temporary object bana deta hai
+
+let message = "hello";
+
+// String primitive hai
+// Phir bhi method use kar sakte hain
+
+console.log(message.length); // here . dekar lenght poocha hai hello ka (temporaray objet)
+
+// Output:
+// 5
+
+
+// String ko CAPITAL letters me convert karta hai
+
+let name = "aziz";
+
+console.log(name.toUpperCase()); // . dekar aziz ko uppercase mai karega 
+// { JavaScript internally temporary object banata hai }
+// Is process ko Autoboxing kehte hain.
+
+// Output:
+// AZIZ
+
+
+// Extra spaces remove karta hai
+
+let user = "   Aziz   ";
+
+console.log(user.trim());
+
+// Output:
+// Aziz
+
+
+
+    </script>
+
+</body>
+</html>

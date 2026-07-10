@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- chapter wise jaise jasie learn kar rahe more topics waise update kar rahe cricket game ko new concept se and code ko aur better and short kar rahe hai -->
+
+    <title>Cricket Game</title>
+    <!--Bat Ball Stump Game-->
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+    
+</head>
+<body>
+   <h2>Bat Ball Stump Game</h2>
+
+   
+    <button onclick="
+
+    let computerChoice = generateComputerChoice(); 
+     let resultMsg = getResult('Bat', computerChoice); 
+    
+    showResult('Bat', computerChoice, resultMsg); 
+
+    ">Bat</button> 
+
+
+
+    <!--now baki 2 button k liye bhi define karenge i.e ball and stump button-->
+
+    <button
+    onclick="
+   computerChoice = generateComputerChoice();
+      resultMsg = getResult('Ball', computerChoice);
+   
+      showResult('Ball', computerChoice, resultMsg); 
+    
+    ">ball</button>
+
+
+
+    <button
+     onclick="
+
+      computerChoice = generateComputerChoice(); 
+      resultMsg = getResult('Stump', computerChoice);
+   
+    showResult('Stump', computerChoice, resultMsg);
+    ">Stump</button>
+
+
+
+   <script>
+    // #Create object for maintaining Score
+
+    //here we are creating an object called score to keep track of the wins, losses, and ties in the game. This object will be used to store the results of each round played by the user against the computer.
+    
+       //#(object topic end slide)  Move method for showing result into score Object.
+       //means score wala part hai wo score ke variable mai put kar denge  taki ek hi jaagh sab rahe by (ek method define karenge diplayscore function se)
+    
+
+    let score ={
+        wins: 0,
+        losses: 0,
+        ties: 0,
+        displayScore: function(){
+            return `Wins: ${score.wins},Losses: ${score.losses},Ties: ${score.ties}`;
+       }
+    };
+    
+        function generateComputerChoice() {
+        let Choice;    //local scope variable ke andar h
+        // this will generate random number between 0 and 3
+    let randomNumber = Math.random() * 3;
+    if (randomNumber > 0 &&  randomNumber <= 1) {
+
+      return 'Bat';  
+
+    } else if (randomNumber > 1 && randomNumber <= 2)
+    {
+        return 'Ball'; 
+      
+    } else{
+      return 'Stump';
+     
+    }return Choice;
+}
+
+
+
+ function getResult(userMove, computerMove){
+    
+    let resultMsg; // global scope hai. button hai result k liye  again define nhi karenge other 2 button mai
+
+    if (userMove === 'Bat') {
+        if (computerMove === 'Ball') {
+            score.wins++; // matlab user ne jeet liya hai. so score mai wins ko increment karenge
+
+            //score.wins++; yahan kyu add kiya alag kahi aur kyu nh ? ans: bcoz user ne jeet liya hai to score mai wins ko increment karenge
+            return 'user won.';
+        } else if (computerMove === 'Bat'){
+            score.ties++;
+            return `It's a tie`;
+        } else if (computerMove ==='Stump'){
+            score.losses++;
+            return 'Computer has won';
+        }
+    } else if (userMove === 'Ball') {
+        if (computerMove === 'Ball') {
+            score.ties++;
+            return `It's a tie`; //ball button par hai
+        } else if (computerMove === 'Bat'){
+            score.losses++;
+            return 'Computer has won';
+        } else if (computerMove ==='Stump'){
+            score.wins++;
+            return 'User has won';
+        }
+    } else if (userMove === 'Stump') {
+        if (computerMove === 'Ball') {
+            score.losses++;
+            return `Computer has won`; //stump  button par hai
+        } else if (computerMove === 'Bat'){
+            score.wins++;
+            return 'User has won';
+        } else if (computerMove ==='Stump'){
+            score.ties++;
+            return `It's a tie`;
+        }
+    }
+
+    return resultMsg;
+ }
+
+   
+   function showResult(userMove, computerMove, result)
+   {
+
+    alert(`You have chosen ${userMove}. Computer choice is ${computerMove} 
+    ${result} 
+
+${score.displayScore()}`); // score part alert mai define kiya     globalscope se i guess
+   }
+//above hamne alert mai dikahane k liye add kiya hai alert mai score points
+
+
+   </script>
+</body>
+</html>

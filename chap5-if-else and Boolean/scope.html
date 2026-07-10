@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>scope</title>
+</head>
+<body>
+<h2> Learning Scope and use</h2>
+    <script>
+        
+//scope tell Variable kahan tak accessible hai
+
+
+// BLOCK SCOPE
+// {} ke andar bana variable
+// Bahar access nahi kar sakte
+
+{
+  let age = 40;
+  console.log(age); // 
+}
+
+// console.log(age);  Error (bahar likha error aagya)
+
+
+// let ko block ke andar redefine kar sakte hain
+
+let name = "Aziz";
+
+{
+  let name = "Ahmed";
+  console.log(name); //  ouput: Ahmed
+}
+
+console.log(name); //  output :Aziz
+
+
+// const bhi block scope follow karta hai
+
+{
+  const city = "Mumbai";
+  console.log(city); 
+}
+
+// console.log(city); Error (outside likha)
+
+
+
+
+// var block scope follow nahi karta
+
+{
+  var marks = 30;
+}
+
+console.log(marks); //  90
+
+
+// GLOBAL SCOPE
+// Sab jagah access kar sakte hain
+
+let country = "India";
+
+console.log(country);
+
+{
+  console.log(country);
+}
+    </script>
+</body>
+</html>

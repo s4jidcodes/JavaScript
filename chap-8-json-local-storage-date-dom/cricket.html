@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- chapter wise jaise jasie learn kar rahe more topics waise update kar rahe cricket game ko new concept se and code ko aur better and short kar rahe hai -->
+
+    <title>Cricket Game</title>
+    <!--Bat Ball Stump Game-->
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+    
+</head>
+<body>
+   <h2>Bat Ball Stump Game</h2>
+
+   
+    <button onclick="
+
+    let computerChoice = generateComputerChoice(); 
+     let resultMsg = getResult('Bat', computerChoice); 
+    
+    showResult('Bat', computerChoice, resultMsg); 
+
+    ">Bat</button> 
+
+
+
+    <!--now baki 2 button k liye bhi define karenge i.e ball and stump button-->
+
+    <button
+    onclick="
+   computerChoice = generateComputerChoice();
+      resultMsg = getResult('Ball', computerChoice);
+   
+      showResult('Ball', computerChoice, resultMsg); 
+    
+    ">ball</button>
+
+
+
+    <button
+     onclick="
+
+      computerChoice = generateComputerChoice(); 
+      resultMsg = getResult('Stump', computerChoice);
+   
+    showResult('Stump', computerChoice, resultMsg);
+    ">Stump</button>
+
+    
+ <button onclick="localStorage.clear()
+ 
+    resetScore();
+    ">Reset</button>
+
+   <script>
+      // (after localstorage slide)#1. Score will survive browser refresh.
+      // how ? pahile hamne localstorage stringigy store. k liye. banya show result mai , then
+      //ek variable banaya let scoreStr getItrm= read karne k liye
+      // if jab bhi string not equal ho(stringify) tab score ko upack karo (parse)else wahi rehne do 
+
+      //#2. Add Reset Button To clear or reset stored data.
+     // create a buttonresetScore(scoreStr);
+
+
+      let scoreStr = localStorage.getItem('Score');
+    let score;
+    resetScore(scoreStr);
+
+    function resetScore(scoreStr) {
+      score = scoreStr ? JSON.parse(scoreStr) : {
+        win: 0,
+        lost: 0,
+        tie: 0,
+      };
+
+      score.displayScore = function() {
+        return `Score:Won:${score.win}, Lost:${score.lost}, Tie: ${score.tie}`;
+      };
+
+      showResult();
+    }
+    
+        function generateComputerChoice() {
+        let Choice;    //local scope variable ke andar h
+        // this will generate random number between 0 and 3
+    let randomNumber = Math.random() * 3;
+    if (randomNumber > 0 &&  randomNumber <= 1) {
+
+      return 'Bat';  
+
+    } else if (randomNumber > 1 && randomNumber <= 2)
+    {
+        return 'Ball'; 
+      
+    } else{
+      return 'Stump';
+     
+    }return Choice;
+}
+
+
+
+ function getResult(userMove, computerMove){
+    
+    let resultMsg; // global scope hai. button hai result k liye  again define nhi karenge other 2 button mai
+
+    if (userMove === 'Bat') {
+        if (computerMove === 'Ball') {
+            score.wins++; 
+            return 'user won.';
+        } else if (computerMove === 'Bat'){
+            score.ties++;
+            return `It's a tie`;
+        } else if (computerMove ==='Stump'){
+            score.losses++;
+            return 'Computer has won';
+        }
+    } else if (userMove === 'Ball') {
+        if (computerMove === 'Ball') {
+            score.ties++;
+            return `It's a tie`; //ball button par hai
+        } else if (computerMove === 'Bat'){
+            score.losses++;
+            return 'Computer has won';
+        } else if (computerMove ==='Stump'){
+            score.wins++;
+            return 'User has won';
+        }
+    } else if (userMove === 'Stump') {
+        if (computerMove === 'Ball') {
+            score.losses++;
+            return `Computer has won`; //stump  button par hai
+        } else if (computerMove === 'Bat'){
+            score.wins++;
+            return 'User has won';
+        } else if (computerMove ==='Stump'){
+            score.ties++;
+            return `It's a tie`;
+        }
+    }
+
+    return resultMsg;
+ }
+
+   
+   function showResult(userMove, computerMove, result){
+
+   localStorage.setItem('score',JSON.stringify(score)); // show result mai store karo score
+
+    alert(`You have chosen ${userMove}. Computer choice is ${computerMove} 
+
+    ${result} 
+
+ ${score.displayScore()}`); 
+   }
+
+
+
+   </script>
+</body>
+</html>

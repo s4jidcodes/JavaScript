@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>TRUTHY & FALSY VALUES</title>
+</head>
+<body>
+    
+<h2>Learning TRUTHY & FALSY VALUES</h2>
+    <script>
+        
+
+// FALSY VALUES
+
+false
+0
+null
+undefined
+NaN
+""
+
+
+// Sab baaki values Truthy hoti hain
+
+
+// Falsy Example
+
+let age = 0;
+
+if (age) {
+  console.log("Truthy");
+}
+else {
+  console.log("Falsy");
+}
+
+// Output:
+// Falsy
+
+
+// Truthy Example
+
+let age2 = 20;
+
+if (age2) {
+  console.log("Truthy");
+}
+
+// Output:
+// Truthy
+
+
+// Empty String
+
+let name = "";
+
+if (name) {
+  console.log("Name Exists");
+}
+else {
+  console.log("Empty String");
+}
+
+
+// Non Empty String
+
+let user = "Sajid";
+
+if (user) {
+  console.log("Truthy");
+}
+
+
+// Boolean Conversion
+
+console.log(Boolean(0));
+// false
+
+console.log(Boolean(100));
+// true
+
+console.log(Boolean(""));
+// false
+
+console.log(Boolean("Hello"));
+// true
+    </script>
+</body>
+</html>

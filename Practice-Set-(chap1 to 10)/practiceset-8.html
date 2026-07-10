@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>practiceset -8</title>
+    <!---Important-->
+    <!--JSON ,Local Storage, Date & DOM
+1. Display good morning, afternoon and night based on
+current hour.
+2. Add the name to the output too.
+3. Create a Button which shows the number how many times
+it has been pressed.
+• Also, it has different colors for when it has been pressed
+odd or even times.
+• The click count should also survive browser refresh.-->
+
+
+<style>
+    #my-button {
+      height: 50px;
+      width: 50px;
+      font-size: 25px;
+      border: none;
+      border-radius: 5px;
+    }
+        .js-even {                /* .js standard naming convention hai jo batata ye class only js par apply hoga  poore page par */
+            background-color: green;
+            color: white;
+        }
+
+        .js-odd {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h3 id="greeting"></h3>
+
+    <button id="my-button" onclick="buttonPressed();"></button>
+    <script>
+
+     let noOfTimesClicked = localStorage.getItem('noOfTimesClicked') || 0; // matlab agar local storage me value hai to use lelo warna 0 lelo
+
+
+    function buttonPressed() { // button press hone par ye function call hoga
+      noOfTimesClicked++; // button press hone par noOfTimesClicked ko 1 se increment kar do
+      localStorage.setItem('noOfTimesClicked', noOfTimesClicked); // local storage me noOfTimesClicked ko set/save kar do
+      updateButton(); // button press hone par updateButton function call hoga
+    }
+
+    function updateButton() { // button update hone par ye function call hoga
+      let button = document.querySelector('#my-button'); // button ko select kar lo
+      if (noOfTimesClicked % 2 === 0) { // agar noOfTimesClicked even hai to ye condition true hoga
+        button.classList.remove('js-odd'); // agar noOfTimesClicked even hai to js-odd class ko remove kar do
+        button.classList.add('js-even');
+      } else {
+        button.classList.remove('js-even');
+        button.classList.add('js-odd');
+      }
+      button.innerText = noOfTimesClicked;  // button ke andar noOfTimesClicked ko show kar do
+    }
+    updateButton(); // page load hone par updateButton function call hoga
+
+     
+     
+     
+     
+     
+     
+    
+     
+     function doGreeting( personName = 'user') { // function bana diya hai jisme default parameter 'user' hai
+    let date = new Date();
+    let hour = date.getHours();
+    let greeting = document.getElementById("greeting"); // Get the greeting element
+
+    if (hour > 5 && hour < 12) { // Check if the hour is between 6 AM and 11 AM
+        greeting.innerHTML = `Good Morning, ${personName}!`;
+    } else if (hour >= 12 && hour < 18) {
+        greeting.innerHTML = `Good Afternoon, ${personName}!`;
+    } else {
+        greeting.innerHTML = `Good Night, ${personName}!`;
+    }
+     }
+     doGreeting(''); // Call the function with a name (add the name you want to display in the greeting)
+
+    </script>
+</body>
+</html>

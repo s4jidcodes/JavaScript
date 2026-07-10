@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Array properties & Methods</title>
+</head>
+<body>
+    
+
+    <script>
+        //1.Array.isArray()
+// Check karta hai variable array hai ya nahi
+
+let fruits = ["Apple", "Mango"];
+
+console.log(Array.isArray(fruits));
+
+// Output:
+// true
+
+//2.// LENGTH
+// Array me total kitne elements hain
+
+let fruit = ["Apple", "Mango", "Banana"];
+
+console.log(fruits.length);
+
+// Output:
+// 3
+
+//3.push()
+// PUSH
+// End me element add karta hai
+
+let frits = ["Apple", "Mango"];
+
+frits.push("Banana");
+
+console.log(frits);
+
+// Output:
+// ["Apple","Mango","Banana"]
+
+//4.pop()
+// POP
+// Last element remove karta hai
+
+let phal = ["Apple", "Mango", "Banana"];
+
+phal.pop();
+
+console.log(phal);
+
+// Output:
+// ["Apple","Mango"]
+
+
+//5.unshift()
+// UNSHIFT
+// Starting me element add karta hai
+
+let fruis = ["Mango", "Banana"];
+
+fruis.unshift("Apple");
+
+console.log(fruis);
+
+// Output:
+// ["Apple","Mango","Banana"]
+
+//6.shift()
+// SHIFT
+// Only first element remove karta hai
+
+let nonvegitable = ["Apple", "Mango", "Banana"];
+
+nonvegitable.shift();
+
+console.log(nonvegitable);
+
+// Output:
+// ["Mango","Banana"]
+
+//7.splice()
+//Add ya remove elements // splice(startIndex, deleteCount)
+
+let num = [10,20,30,40,];
+num.splice(1,2);
+console.log(num);
+
+//8.toString()
+// ARRAY → STRING
+
+let alphabets = ["a","b","c","d"]
+
+console.log(alphabets.toString());
+//a,b,c,d --->  without []
+
+//9.sort()
+// SORT
+// Array ko sort karta hai
+
+let numbers = [3, 1, 2];
+
+numbers.sort();
+
+console.log(numbers);
+
+// Output:
+// [1,2,3]
+
+
+ //9.valueOf()
+ // valueOf()
+// Array khud return karta hai ---> Rare use.
+
+let ffruits = ["Apple", "Mango"];
+
+console.log(ffruits.valueOf());
+
+// Output:
+// ["Apple","Mango"]
+
+
+//10.Array Reference
+// Array bhi Object ki tarah Reference Type hai
+
+let arr1 = [1, 2, 3];
+
+let arr2 = arr1;
+
+arr2.push(4);
+
+console.log(arr1);
+
+// Output:
+// [1,2,3,4]
+
+
+//11.Array Destructuring
+// Array se values nikalna
+
+let colors = ["Red", "Green", "Blue"];
+
+let [first, second] = colors;
+
+console.log(first);
+// Red
+
+console.log(second);
+// Green
+
+
+
+
+    </script>
+</body>
+</html>
