@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A simple and focused todo list that saves tasks in your browser."
+    />
+    <title>Daily Tasks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="todo-card" aria-labelledby="page-title">
+        <header class="app-header">
+          <div>
+            <p class="eyebrow">My day</p>
+            <h1 id="page-title">Daily Tasks</h1>
+            <p class="subtitle">Small steps, meaningful progress.</p>
+          </div>
+          <div class="date-badge" aria-label="Today's date">
+            <span id="date-month"></span>
+            <strong id="date-day"></strong>
+          </div>
+        </header>
+
+        <form id="todo-form" class="todo-form">
+          <label class="sr-only" for="todo-input">Add a new task</label>
+          <input
+            id="todo-input"
+            type="text"
+            placeholder="What needs to be done?"
+            maxlength="120"
+            autocomplete="off"
+            required
+          />
+          <button type="submit" class="add-button" aria-label="Add task">
+            <span aria-hidden="true">+</span>
+            Add task
+          </button>
+        </form>
+
+        <div class="toolbar">
+          <div class="filters" role="group" aria-label="Filter tasks">
+            <button class="filter-button active" type="button" data-filter="all">
+              All
+            </button>
+            <button class="filter-button" type="button" data-filter="active">
+              Active
+            </button>
+            <button class="filter-button" type="button" data-filter="completed">
+              Completed
+            </button>
+          </div>
+          <button id="clear-completed" class="clear-button" type="button">
+            Clear completed
+          </button>
+        </div>
+
+        <ul id="todo-list" class="todo-list" aria-live="polite"></ul>
+
+        <div id="empty-state" class="empty-state">
+          <div class="empty-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" role="img">
+              <path d="M14 10h20v28H14z" />
+              <path d="M19 17h10M19 24h10M19 31h6" />
+              <path d="M19 7h10v6H19z" />
+            </svg>
+          </div>
+          <h2>Your list is clear</h2>
+          <p>Add a task above and make today count.</p>
+        </div>
+
+        <footer class="app-footer">
+          <p id="task-count">0 tasks left</p>
+          <p>Tasks are saved automatically</p>
+        </footer>
+      </section>
+    </main>
+
+    <template id="todo-template">
+      <li class="todo-item">
+        <label class="check-control">
+          <input class="todo-check" type="checkbox" />
+          <span class="custom-check" aria-hidden="true">
+            <svg viewBox="0 0 16 16">
+              <path d="m3 8 3 3 7-7" />
+            </svg>
+          </span>
+          <span class="todo-text"></span>
+        </label>
+        <button class="delete-button" type="button" aria-label="Delete task">
+          <svg viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M4 6h12M8 6V4h4v2M6 6l1 11h6l1-11M9 9v5M11 9v5" />
+          </svg>
+        </button>
+      </li>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
