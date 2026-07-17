@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Anonymous Function</title>
+</head>
+<body>
+    <script>
+
+// Anonymous function ko variable 'sum' me store kiya
+
+let sum = function(num1, num2) {
+
+  // Dono numbers ka addition return karo
+  return num1 + num2;
+};
+
+
+// Function ki reference copy karke new variable me store ki
+let newSum = sum;
+
+
+// sum function ko call kiya
+console.log(sum(4, 5));
+
+
+// newSum bhi same function ko point kar raha hai
+console.log(newSum(4, 5));
+
+
+
+
+
+
+    </script>
+</body>
+</html>

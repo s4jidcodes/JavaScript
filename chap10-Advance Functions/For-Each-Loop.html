@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>For Each Loop</title>
+    <!--Array ke har element par ek baar function chalata hai-->
+    <!--only Array mai apply this-->
+</head>
+<body>
+    <script>
+        // // forEach()
+        // let arr = [10,20,30];
+
+        // arr.forEach(function(value){
+        //     console.log(value);
+        // });
+
+
+        // //current value & index 
+        // // first parameter = current value
+        // //  second parameter = index(optional)
+
+        // let fruits = ["Apple","mango", "Banana;"];
+
+        // fruits.forEach(function(fruit,index){
+        // console.log(index,fruit);
+        // });
+
+
+
+        //   //use of return in for each loop   --> {here return ~ continew ke  tarah kam karega for loop mai padha}
+        //  // return = Current iteration skip
+
+        //  let numbers = [1, 2, 3, 4];
+
+        //  numbers.forEach(function (num) {
+
+        //  if (num === 3) {
+        //      return; // Sirf 3 skip hoga
+        //  }
+
+        //    console.log(num);
+        //   });
+
+
+
+
+       // now number search karne k liye...
+       let arr =[ 1,2,3,4,5,6,7,8,9];
+
+       function search(arr,num){
+       for(let i=0 ; i < arr.length; i++) {
+        if (arr[i] === num){   // means if arrar index ne number eg:4 paa liya hoga tab print ...below
+        console.log(`element found at :${i}`);
+        return; // poora array chalke stop
+        }
+       }
+       console.log('Element was not found');  
+       }
+      
+       search(arr, 5);
+       // element found at :4
+       
+
+    // //arrow function
+    // let arr =[ 10,20,30,40];
+
+    // arr.forEach((num) => {   //common mistake: forEach closing bracket last mai
+    //  console.log(num);
+    // });
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Event Listener</title>
+</head>
+<body>
+    <button id="btn">Click button</button>
+    <script>
+    //   //add EventListener
+    //   //button listen kiya
+    //   let button = document.querySelector("#btn");
+      
+    //   // click event listen karo ---> jab click
+    //   button.addEventListener("click", function () {
+    //   console.log("Button Clicked");
+    //  });
+
+
+    // //Multiple Event Listeners means. ek hi button(event) par multiple listner laga sakte hai
+    
+    // let button = document.querySelector("#btn");
+
+    // //listener 1
+    // button.addEventListener("click", function() {
+    //     console.log("shah");
+    // });
+
+    // //listener 2
+    // button.addEventListener("click", function() {
+    //     console.log("sajid");
+    // });
+
+
+
+    // click ke sath print date --> example of multiple listener 
+    //uses anonymous fn, Arrow fn to short code.. below
+    let button = document.querySelector("#btn");
+    let printDate = event => console.log(new Date());
+
+    //click enevent listen
+    button.addEventListener("click", printDate);
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Practice set 10 </title>
+          <!--Arrays & Loops IMP-->
+          <!-- 1. Create an array of numbers [5,6]. Add 4 at the beginning and 7 at the end of the array.
+2. Create a method to return an element at a particular position in the array.
+3. Create an array copy using slice method.
+4. Create a while loop that exits after counting 5 prime numbers.
+5. Modify the above loop to finish using break.
+6. Create a for loop that prints number 1 to 10 in reverse order.
+7. Using continue only print positive numbers from the given array [1,-6,5,7,-98]
+8. Using accumulator pattern concatenate all the strings in the given array
+ [‘KG’, ‘Coding’, ‘Javascript’, ‘Course’, ‘is’, ‘Best’] -->
+
+
+</head>
+<body>
+    <script>
+    //     //1.
+    //      let arr = [5,6];
+    //    arr.push(7);
+    //    arr.unshift(4);
+    //    console.log(arr);
+
+    
+
+         //2.
+    //      // Function banaya jo array aur position lega
+    //   function getElement(arr, position) {
+ 
+    //    // Array ke given index ki value return karo
+    //     return arr[position];
+    //    }
+ 
+    //    // Array banaya
+    //    let arr = [1,2,3,4,5,6,7,8,9];
+       
+    //    // Function call kiya with position 1
+    //    let result = getElement(arr, 1);
+       
+    //    // Result print kiya,
+    //    console.log(result);
+       
+
+
+
+     //3.
+    //  // Original array
+    //   let numbers = [10, 20, 30, 40];
+      
+      
+    //   // slice() bina arguments ke poore array ki copy banata hai .. slice method
+    //   let copy = numbers.slice();
+      
+      
+    //   // Copy print karo
+    //   console.log(copy);
+     
+
+
+
+        //4. & .5
+
+// // Kitne prime numbers mile
+// let count = 0;
+
+
+// // Number check karna 2 se start karenge
+// let num = 2;
+
+
+// // Jab tak 5 prime numbers na mil jaye
+// while (count < 5) {
+
+//   // Assume karo number prime hai
+//   let isPrime = true;
+
+
+//   // 2 se num-1 tak divide karke check karo
+//   for (let i = 2; i < num; i++) {
+
+//     // Agar perfectly divide ho gaya
+//     if (num % i === 0) {
+
+//       // To prime nahi hai
+//       isPrime = false;
+
+//       // Aur check karne ki zarurat nahi  
+//       break;
+//     }
+//   }
+
+//   // Agar number prime nikla
+//   if (isPrime) {
+
+//     // Prime number print karo
+//     console.log(num);
+
+//     // Prime count badhao
+//     count++;
+//   }
+//   // Next number check karo
+//   num++;
+// }
+      
+
+
+
+//.6
+//   for (let i = 10; i > 0; i--) {  // decrement loop
+//     console.log(i);
+//   } 
+  //or write
+//   for (let i = 0; i < 10; i++){
+//     console.log(10 - i);  //i 10 mai se minus hoti rahegi
+//   }
+  
+
+
+
+ //7.
+//  let nums = [1,-6,5,7,-98];
+//  for (let i = 0; i < nums.length; i++){
+//     if (nums[i] < 0) continue;   // continue only print positive numbers from the given array
+//     console.log(num[i]);
+//  }
+
+
+
+     //8.
+       let  arr = ['KG', 'Coding', 'Javascript', 'Course',' is',' Best'];
+    //    let result = ''
+    //    for (let i = 0; i < arr.length; i++){
+    //     result += arr[i] + ' '; // + ' ' beech mai spacing k liye
+    //    }
+    // console.log(result);
+
+    // or other way shorthand  one line
+
+  console.log(arr.join(","));  //here ,comma bhi diya
+
+    </script>
+</body>
+</html>

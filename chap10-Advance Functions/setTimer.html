@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>setTimeout & setInterval</title>
+</head>
+<body>
+    <script>
+        //setTimeout()
+        // // Ek baar specified time ke baad function chalata hai
+
+        // setTimeout(function(){
+        //     console.log("hello after 5 seconds");
+        // },5000);
+
+
+        //setInterval()
+        // // Same function ko baar-baar chalata hai
+        // setInterval(function () {
+        //     console.log("hello");
+        // },5000);
+
+        // // Timeout cancel kar diya
+        //  clearTimeout(setInterval);
+
+
+        // setInterval()
+       //    // Same function ko baar-baar chalata hai
+      //    // Ye continuously repeat hota rahega
+      //    setInterval(function () {
+     //    console.log("Hello");
+     //  }, 3000);
+
+          
+       // Alarm function banaya
+     let alarm = () => console.log(`Wake up It's 7 o'clock.
+     ${new Date()}`);
+
+       // Har 2 second baad alarm function automatically chalega
+      let intervalID = setInterval(alarm, 2000);
+
+     // 6 second baad interval ko stop kar do
+     setTimeout(() => clearInterval(intervalID), 6000);
+
+    </script>
+</body>
+</html>

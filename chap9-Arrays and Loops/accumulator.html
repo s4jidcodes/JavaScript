@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Accumulator pattern</title>
+</head>
+<body>
+    <script>
+        let nums = [1,3,6,7,5,8];
+        let sum = 0;
+        for (let i = 0; i < nums.length; i++){ 
+            sum += nums[i]; // means num[i] ko add + kardo
+        }
+       console.log(`sum of the array is ${sum}`);
+
+       let squares = []
+        for (let i = 0; i < nums.length; i++){ 
+           // squares[i] = nums[i] * nums[i]; or
+           //squares.push(nums[i] * nums[i]); or  //array property push()
+           squares.push(nums[i] * 2);
+        }
+       console.log(squares);
+    </script>
+</body>
+</html>

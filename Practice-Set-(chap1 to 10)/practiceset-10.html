@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Advance Functions</title>
+    <!--Advance Functions-->
+
+<!--1. Create a variable multiply and assign a function to this 
+variable that multiplies two numbers. Call this method from
+the variable.
+2. Create a function runTwice that takes a function as a
+parameter and then runs that method twice.
+3. Create a button which should grow double in size on
+clicking after 2 seconds.
+4. In the above exercise add the behavior using an event
+listener instead of onclick.
+5. Create a function that sums an array of numbers. Do this
+using a for-each loop.
+6. Create a function that takes an array of numbers and
+return their squares using map function.-->
+
+
+<style>
+   .btn-subscribe{
+    font-size: 15px;
+    height: 20px;
+      width: 80px;
+      background-color: rgb(217, 17, 17);
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+    .js-size-double {
+      font-size: 30px;
+      height: 40px;
+      width: 160px;
+    }
+   
+</style>
+</head>
+<body>
+  <button class="btn-subscribe">Subscribe</button>
+    <script>
+
+            //Q3,Q4
+            // let buttonElement = document.querySelector('.btn-subscribe');
+            // buttonElement.addEventListener('click', event => setTimeout(doubleTheSize, 2000)) // arrow function used
+
+            // function doubleTheSize() {
+            //   let buttonElement = document.querySelector('.btn-subscribe');
+            //   buttonElement.classList.add('js-size-double');
+            // }
+
+
+        //     // Q1.
+        //     // Anonymous Function ko 'multiply' variable me store kiya
+        //    let multiply = function(num1, num2) {
+
+        //   // Dono numbers ko multiply karke return karo
+        //   return num1 * num2;
+        //   };
+
+        //    // Variable ke through function ko call kiya
+        //  console.log(multiply(4, 5));
+        //  //20
+
+
+          //Q2.
+        //   // Ek normal function banaya
+        //  function greet() {
+         
+        //    // Ye message print karega
+        //    console.log("Hello");
+        //  }
+         
+        //  // runTwice function banaya
+        //  // Iska parameter 'fun' hai
+        //  // Is parameter me ek function receive hoga
+         
+        //  function runTwice(fun) {         //runTwice fn name hai means isko 2 baar call karna hoga tab runTime kam karega js ko twice matlab nhi pata function name hai...
+         
+        //    // "Received" function ko pehli baar call kiya
+        //    fun();
+         
+        //    // Received function ko doosri baar call kiya
+        //    fun();
+        //  };
+         
+         
+        //  // greet function ko argument ke roop me bheja
+        //  runTwice(greet);
+         
+        //  // Hello
+        //  // Hello
+
+
+           //Q5.
+           let arr = [1,2,3,4,5,6,7];
+          //  let sum =0;
+          //  arr.forEach(num => sum += num);
+          //  console.log(sum);
+
+           //Q6
+           let squares =arr.map(num => num*num);
+           console.log(squares);
+
+    </script>
+</body>
+</html>
